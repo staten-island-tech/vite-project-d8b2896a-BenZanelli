@@ -4,23 +4,28 @@
     --lights: #fff9fa;
     --lightt:#fece44;
     --lightf:#ee8577;
+    --lighttext: #000;
     --darks: #2d3e60;
     --darkt:#43968c;
     --darkf:#5fd69c;
+    --darktext:#ffff;
     --primary: var(--lightp);
     --secondary: var(--lights);
     --tertiary: var(--lightt);
     --fourth:var(--lightf)
+    
 }
 .lightmd{
     --primary:var(--lightp);
     --secondary:var(--lights);
     --tertiary: var(--lightt);
-    --fourth:var(--lightf)
+    --fourth:var(--lightf);
+    --texts:var(--lighttext);
 }
 .darkmd{
     --primary:var(--darkp);
     --secondary:var(--darks);
     --tertiary: var(--darkt);
-    --fourth:var(--darkf)
+    --fourth:var(--darkf);
+    --texts:var(--darktext)
 }
