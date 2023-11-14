@@ -47,3 +47,13 @@ function populate(){
   ))
 }
 populate()
+function filters(){
+  let uni = document.querySelector(".uniform");
+  let parent = document.querySelector(".parent")
+  uni.addEventListener("click", function(){
+    let name= document.querySelector("#name") 
+    name.forEach((el)=> el.parentElement.remove)
+  })
+  
+}
+filters()
