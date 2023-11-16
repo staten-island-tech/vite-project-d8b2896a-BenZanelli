@@ -1,9 +1,9 @@
 import "../styles/style.css";
 import { items } from "./items.js";
-
+let parent = document.querySelector(".parent")
+let card=document.querySelectorAll(".card");
 function swap(){
   let dark=document.querySelector(".dark");
-  let card=document.querySelectorAll(".card");
   let texts=document.querySelectorAll(".text")
   dark.addEventListener("click", function(){
     document.body.classList.add("darkmd")
@@ -36,7 +36,6 @@ function swap(){
 }
 swap()
 function populate(){
-  let parent = document.querySelector(".parent")
   items.forEach((el)=> parent.insertAdjacentHTML(
     "beforeend",
     `<div class=card>
@@ -47,13 +46,52 @@ function populate(){
   ))
 }
 populate()
+
 function filters(){
-  let uni = document.querySelector(".uniform");
-  let parent = document.querySelector(".parent")
+  let uni= document.querySelector(".uniform")
+  let remove= document.querySelector(".remove")
+  let reset= document.querySelector(".reset")
+  let name = document.querySelectorAll("#name") 
+  let weapon = document.querySelector(".weapon")
   uni.addEventListener("click", function(){
-    let name= document.querySelector("#name") 
-    name.forEach((el)=> el.parentElement.remove)
+    name.forEach((el)=>el.parentElement.remove())
+    items
+    .filter((el)=>el.type.includes("uniform"))
+    .forEach((el)=>parent.insertAdjacentHTML(
+      "beforeend",
+      `<div class=card>
+      <h2 id="name" class="text">${el.name}</h2>
+      <img src="${el.image}" class="image">
+      <h3 id="price" class="text">$${el.price}</h3>
+      </div>`
+    ))
   })
-  
+  remove.addEventListener("click", function(){
+    name.forEach((el)=>el.parentElement.remove())
+  })
+  weapon.addEventListener("click", function(){
+    name.forEach((el)=>el.parentElement.remove())
+    items
+    .filter((el)=>el.type.includes("weapon"))
+    .forEach((el)=>parent.insertAdjacentHTML(
+      "beforeend",
+      `<div class=card>
+      <h2 id="name" class="text">${el.name}</h2>
+      <img src="${el.image}" class="image">
+      <h3 id="price" class="text">$${el.price}</h3>
+      </div>`
+    ))
+  })
+/*   reset.addEventListener("click", function(event){
+    event.preventDefault();
+    items.forEach((el)=> parent.insertAdjacentHTML(
+      "beforeend",
+      `<div class=card>
+      <h2 id="name" class="text">${el.name}</h2>
+      <img src="${el.image}" class="image">
+      <h3 id="price" class="text">$${el.price}</h3>
+      </div>`
+  ))}) */
+
 }
 filters()
