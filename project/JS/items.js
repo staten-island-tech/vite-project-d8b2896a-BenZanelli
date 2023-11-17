@@ -1,56 +1,56 @@
 const items = [
     {
         name: "JACKET",
-        image: "https://allstar.de/thumbnail/40/07/e1/1669622454/9500H_3_1920x1920.jpg",
+        image: "https://uhlmann-fechtsport.com/thumbnail/07/d6/16/1605282350/10008_1920x1920.jpg",
         price: 299,
         sale: true,
         type: ["uniform", "fie"],    
     },
     {
         name: "PANTS",
-        image: "https://allstar.de/thumbnail/05/ea/4e/1669622210/9501H_3_1920x1920.jpg",
+        image: "https://uhlmann-fechtsport.com/thumbnail/19/22/c4/1605282435/10108_1920x1920.jpg",
         price: 205,
         sale: false,
         type: ["uniform", "fie"],
     },
     {
         name:"PLASTRON",
-        image:"https://allstar.de/thumbnail/80/51/ac/1670251982/SPG-H_2_1920x1920.jpg",
+        image:"https://uhlmann-fechtsport.com/thumbnail/7e/a0/8c/1605282728/10203_400x400.jpg",
         price: 84,
         sale: false,
         type: ["uniform", "protection", "fie"]
     },
     {   
         name:"MASK",
-        image:"https://allstar.de/thumbnail/d6/d8/40/1686043524/AMID_2_1920x1920.jpg",
+        image:"https://uhlmann-fechtsport.com/thumbnail/8c/17/be/1605296952/10836_1920x1920.jpg",
         price:150,
         sale:false,
         type: ["uniform", "protection", "fie"]
     },
     {
         name:"GLOVE",
-        image:"https://allstar.de/thumbnail/57/51/b0/1651660403/AKH-GS_2_1920x1920.jpg",
+        image:"https://uhlmann-fechtsport.com/thumbnail/9f/40/0b/1605296335/10406_1920x1920.jpg",
         price:34,
         sale:true,
         type: ["uniform", "protection"]
     },
     {
         name:"EPEE",
-        image:"https://allstar.de/thumbnail/42/af/92/1694691605/ED17P_1920x1920.jpg",
+        image:"https://uhlmann-fechtsport.com/thumbnail/e8/f8/86/1605298697/113067-RH_1920x1920.jpg",
         price:203.5,
         sale:true,
         type: ["weapon","electric","fie","epee"]
     },
     {
         name:"FOIL",
-        image:"https://allstar.de/thumbnail/ce/6f/9d/1695127859/EF17P_500x500.jpg",
+        image:"https://uhlmann-fechtsport.com/thumbnail/9c/28/a8/1605297987/111067-RH_1920x1920.jpg",
         price:150.6,
         sale:true,
         type: ["weapon","electric","fie","foil"]
     },
     {
         name:"WIRE",
-        image:"https://allstar.de/thumbnail/71/8d/6e/1673139054/DK-T_1920x1920.jpg",
+        image:"https://uhlmann-fechtsport.com/thumbnail/17/3c/f4/1605299767/12554_1920x1920.jpg",
         price:150.6,
         sale:false,
         type:["electric","uniform","epee"]

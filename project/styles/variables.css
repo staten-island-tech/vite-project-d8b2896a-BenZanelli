@@ -1,14 +1,14 @@
 :root{
-    --lightp: #838684;
-    --darkp: #000000;
+    --lightp: #0e5ea0;
+    --darkp: #f22038;
     --lights: #fff9fa;
     --lightt:#fece44;
     --lightf:#ee8577;
     --lighttext: #000;
-    --darks: #2d3e60;
+    --darks: #ffffff;
     --darkt:#43968c;
     --darkf:#5fd69c;
-    --darktext:#ffff;
+    --darktext: #000;
     --primary: var(--lightp);
     --secondary: var(--lights);
     --tertiary: var(--lightt);
