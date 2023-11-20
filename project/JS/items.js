@@ -2,6 +2,7 @@ const items = [
     {
         name: "JACKET",
         image: "https://uhlmann-fechtsport.com/thumbnail/07/d6/16/1605282350/10008_1920x1920.jpg",
+        aimage: "https://allstar.de/thumbnail/40/07/e1/1669622454/9500H_3_1920x1920.jpg",
         price: 299,
         sale: true,
         type: ["uniform", "fie"],    
