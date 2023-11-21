@@ -3,6 +3,7 @@ html {
   font-size: 13px;
   font-family:"Mooli", Tahoma, sans-serif;
   overflow: auto;
+  transition: all .3s;
 }
 body {
   background-color:var(--primary);
@@ -32,7 +33,7 @@ body {
     align-items: center;
    flex-direction: column;  
    background-color: var(--secondary);
-   width: 45%;
+   width: 30%;
    margin-left: auto;
    margin-right: auto;
    margin-bottom: 1.5rem;
@@ -40,13 +41,14 @@ body {
    box-shadow: 10px 7px 10px rgb(0, 0, 0);
    justify-content: space-around;
    transition: all .3s;
-  height: 30%;
   border-radius: 20px;
+  height: 50vh;
 }
 .image {
-    width: 50%;
+    width: 60%;
     border: 5px var(--primary) solid;
     transition: .3s;
+        height: 70%
 }
 .text {
   color: var(--texts);
