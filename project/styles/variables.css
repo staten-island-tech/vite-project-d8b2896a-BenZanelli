@@ -1,19 +1,22 @@
 :root{
     --lightp: #0e5ea0;
-    --darkp: #f22038;
+    --darkp: #000000;
     --lights: #fff9fa;
-    --lightt:#fece44;
-    --lightf:#ee8577;
+    --lightt:#ddd8d0;
+    --lightf:#d7d1d1;
     --lighttext: #000;
-    --darks: #ffffff;
-    --darkt:#43968c;
-    --darkf:#5fd69c;
-    --darktext: #000;
+    --lt2: #000000;
+    --darks: #c20000;
+    --darkt:#c20000;
+    --darkf:#fefefe;
+    --darktext: #ffffff;
+    --dt2: #000;
     --primary: var(--lightp);
     --secondary: var(--lights);
     --tertiary: var(--lightt);
     --fourth:var(--lightf)
-    
+    --texts:var(--lighttext)
+    --t2:var(--lt2)
 }
 .lightmd{
     --primary:var(--lightp);
@@ -21,11 +24,13 @@
     --tertiary: var(--lightt);
     --fourth:var(--lightf);
     --texts:var(--lighttext);
+    --t2:var(--lt2)
 }
 .darkmd{
     --primary:var(--darkp);
     --secondary:var(--darks);
     --tertiary: var(--darkt);
     --fourth:var(--darkf);
-    --texts:var(--darktext)
+    --texts:var(--darktext);
+    --t2:var(--dt2)
 }
