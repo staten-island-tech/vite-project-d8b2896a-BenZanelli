@@ -32,6 +32,9 @@ function filters(){
   let reset= document.querySelector(".reset")
   let name = document.querySelectorAll(".name") 
   let weapon = document.querySelector(".weapon")
+  let sale = document.querySelector(".sale")
+  let epee = document.querySelector(".epee")
+  let foil = document.querySelector(".foil")
   uni.addEventListener("click", function(){
     name = document.querySelectorAll(".name") 
     name.forEach((el)=>el.parentElement.remove())
@@ -61,6 +64,48 @@ function filters(){
       <h2 id="name" class="name">${el.name}</h2>
       <img id="${el.name}" src="${el.image}" class="image" >
       <h3 id="price" class="price">$${el.price}</h3>
+      </div>`
+    ))
+  })
+  sale.addEventListener("click", function(){
+    name = document.querySelectorAll(".name") 
+    name.forEach((el)=>el.parentElement.remove())
+    items
+    .filter((el)=> el.sale === true)
+    .forEach((el)=> parent.insertAdjacentHTML(
+      "beforeend",
+      `<div class=card>
+      <h2 id="name" class="name">${el.name}</h2>
+      <img id="${el.name}" src="${el.image}" class="image">
+      <h3 id="price" class="name">$${el.price}</h3>
+      </div>`
+    ))
+  })
+  epee.addEventListener("click", function(){
+    name = document.querySelectorAll(".name") 
+    name.forEach((el)=>el.parentElement.remove())
+    items
+    .filter((el)=> el.type.includes("epee"))
+    .forEach((el)=> parent.insertAdjacentHTML(
+      "beforeend",
+      `<div class=card>
+      <h2 id="name" class="name">${el.name}</h2>
+      <img id="${el.name}" src="${el.image}" class="image">
+      <h3 id="price" class="name">$${el.price}</h3>
+      </div>`
+    ))
+  })
+  foil.addEventListener("click", function(){
+    name = document.querySelectorAll(".name") 
+    name.forEach((el)=>el.parentElement.remove())
+    items
+    .filter((el)=> el.type.includes("foil"))
+    .forEach((el)=> parent.insertAdjacentHTML(
+      "beforeend",
+      `<div class=card>
+      <h2 id="name" class="name">${el.name}</h2>
+      <img id="${el.name}" src="${el.image}" class="image">
+      <h3 id="price" class="name">$${el.price}</h3>
       </div>`
     ))
   })

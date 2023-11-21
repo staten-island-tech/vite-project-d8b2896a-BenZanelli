@@ -55,6 +55,13 @@ const items = [
         price:150.6,
         sale:false,
         type:["electric","uniform","epee"]
+    },
+    {
+        name:"EPEE WIRE",
+        image:"https://uhlmann-fechtsport.com/thumbnail/5a/28/02/1605300001/12254_400x400.jpg",
+        price:26,
+        sale:true,
+        type:["electric","uniform","foil"]
     }
 
 ]
