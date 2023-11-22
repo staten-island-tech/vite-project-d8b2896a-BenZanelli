@@ -3,7 +3,7 @@ html {
   font-size: 13px;
   font-family:"Mooli", Tahoma, sans-serif;
   overflow: auto;
-  transition: all .3s;
+  transition: all 124s;
 }
 body {
   background-color:var(--primary);
@@ -13,6 +13,8 @@ body {
   flex-direction: row;
   justify-content: center;
   justify-content: space-around;
+  
+
 }
 #button {
   width: 30%;
@@ -22,7 +24,13 @@ body {
   background-color: var(--secondary);
   color: var(--texts);
   transition: all .3s;
+box-shadow:5px 3px 10px var(--box2);}
+#button:hover {
+    transition: all .1s ease;
+    box-shadow: 0 0 0 0 
 }
+
+
 .parent {
     display: flex;
     flex-wrap: wrap;
@@ -38,17 +46,21 @@ body {
    margin-right: auto;
    margin-bottom: 1.5rem;
    padding: 3px;
-   box-shadow: 10px 7px 10px rgb(0, 0, 0);
+   box-shadow:10px 7px 10px var(--box);
    justify-content: space-around;
-   transition: all .3s;
+   transition: all .5s;
   border-radius: 20px;
   height: 50vh;
+
 }
 .image {
     width: 60%;
-    border: 5px var(--primary) solid;
+    border: 5px var(--img) solid;
     transition: .3s;
-        height: 35vh
+    height: 35vh
+}
+.image:hover{
+  scale: 110%;
 }
 #name {
   color: var(--t2);
@@ -58,16 +70,24 @@ body {
   color: var(--t2);
   font-size: 1.5rem;
 }
+
 .filters {
   display: flex;
   flex-direction: row;
   justify-content: center;
   justify-content: space-around;
   margin-bottom: 10px;
+  
+
 }
 #btn {
   width: 14%;
   height: 4vh;
   background-color: var(--secondary);
   color: var(--texts);
+  box-shadow:3px 2px 3px var(--box2);
+}
+#btn:hover {
+  transition: all .1s ease;
+  box-shadow: 0 0 0 0 
 }
