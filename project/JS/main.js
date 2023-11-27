@@ -1,128 +1,40 @@
 import "../styles/style.css";
 import { items } from "./items.js";
-let parent = document.querySelector(".parent")
-let card=document.querySelectorAll(".card");
-function swap(){
-  let dark=document.querySelector(".allstar");
-  dark.addEventListener("click", function(){
+import { DOMselectors } from "./dom";
+function swap(){ 
+DOMselectors.dark.addEventListener("click", function(){
     document.body.classList.add("darkmd")
     document.body.classList.remove("lightmd")
   })
-  let light=document.querySelector(".uhlmann");
-  light.addEventListener("click", function(){
+ DOMselectors.light.addEventListener("click", function(){
     document.body.classList.add("lightmd")
     document.body.classList.remove("darkmd")
   })
-
 }
-
-function populate(){
-  items.forEach((el)=> parent.insertAdjacentHTML(
+//accepts an array and pushes content onto HMTL
+function populate(arr){
+  arr.forEach((el)=> DOMselectors.parent.insertAdjacentHTML(
     "beforeend",
-    `<div class=card>
+    `<div class='card'>
     <h2 id="name" class="name">${el.name}</h2>
     <img id="${el.name}" src="${el.image}" class="image">
     <h3 id="price" class="name">$${el.price}</h3>
     </div>`
   ))
-}
+  }
 function filters(){
-  let uni= document.querySelector(".uniform")
-  let remove= document.querySelector(".remove")
-  let reset= document.querySelector(".reset")
-  let name = document.querySelectorAll(".name") 
-  let weapon = document.querySelector(".weapon")
-  let sale = document.querySelector(".sale")
-  let epee = document.querySelector(".epee")
-  let foil = document.querySelector(".foil")
-  uni.addEventListener("click", function(){
-    name = document.querySelectorAll(".name") 
-    name.forEach((el)=>el.parentElement.remove())
-    items
-    .filter((el)=>el.type.includes("uniform"))
-    .forEach((el)=>parent.insertAdjacentHTML(
-      "beforeend",
-      `<div class=card>
-      <h2 id="name" class="name">${el.name}</h2>
-      <img id="${el.name}" src="${el.image}" class="image">
-      <h3 id="price" class="price">$${el.price}</h3>
-      </div>`
-    ))
-  })
-  remove.addEventListener("click", function(){
-    name = document.querySelectorAll(".name") 
-    name.forEach((el)=>el.parentElement.remove())
-  })
-  weapon.addEventListener("click", function(){
-    name = document.querySelectorAll(".name") 
-    name.forEach((el)=>el.parentElement.remove())
-    items
-    .filter((el)=>el.type.includes("weapon"))
-    .forEach((el)=>parent.insertAdjacentHTML(
-      "beforeend",
-      `<div class=card>
-      <h2 id="name" class="name">${el.name}</h2>
-      <img id="${el.name}" src="${el.image}" class="image" >
-      <h3 id="price" class="price">$${el.price}</h3>
-      </div>`
-    ))
-  })
-  sale.addEventListener("click", function(){
-    name = document.querySelectorAll(".name") 
-    name.forEach((el)=>el.parentElement.remove())
-    items
-    .filter((el)=> el.sale === true)
-    .forEach((el)=> parent.insertAdjacentHTML(
-      "beforeend",
-      `<div class=card>
-      <h2 id="name" class="name">${el.name}</h2>
-      <img id="${el.name}" src="${el.image}" class="image">
-      <h3 id="price" class="name">$${el.price}</h3>
-      </div>`
-    ))
-  })
-  epee.addEventListener("click", function(){
-    name = document.querySelectorAll(".name") 
-    name.forEach((el)=>el.parentElement.remove())
-    items
-    .filter((el)=> el.type.includes("epee"))
-    .forEach((el)=> parent.insertAdjacentHTML(
-      "beforeend",
-      `<div class=card>
-      <h2 id="name" class="name">${el.name}</h2>
-      <img id="${el.name}" src="${el.image}" class="image">
-      <h3 id="price" class="name">$${el.price}</h3>
-      </div>`
-    ))
-  })
-  foil.addEventListener("click", function(){
-    name = document.querySelectorAll(".name") 
-    name.forEach((el)=>el.parentElement.remove())
-    items
-    .filter((el)=> el.type.includes("foil"))
-    .forEach((el)=> parent.insertAdjacentHTML(
-      "beforeend",
-      `<div class=card>
-      <h2 id="name" class="name">${el.name}</h2>
-      <img id="${el.name}" src="${el.image}" class="image">
-      <h3 id="price" class="name">$${el.price}</h3>
-      </div>`
-    ))
-  })
-  reset.addEventListener("click", function(event){
-    name = document.querySelectorAll(".name") 
-    name.forEach((el)=>el.parentElement.remove())
-    items.forEach((el)=> parent.insertAdjacentHTML(
-      "beforeend",
-      `<div class=card>
-      <h2 id="name" class="name">${el.name}</h2>
-      <img id="${el.name}" src="${el.image}" class="image">
-      <h3 id="price" class="name">$${el.price}</h3>
-      </div>`
-    ))
-  })
-
+    //for each button we add click event handler
+    DOMselectors.buttons.forEach((btn)=> btn.addEventListener("click", function(){
+      //get button text to be used later
+      let category = btn.textContent.toLowerCase()
+      //create new array by filtering items by category (the button clicked)
+      let newArr = items.filter((el)=>el.type.includes(category))
+      //remove all old cards
+      DOMselectors.parent.innerHTML = ""
+      //passing in new filtered array to put cards on screen
+      populate(newArr)
+    }))
 }
-populate()
-filters()
+populate(items)
 swap()
+filters()

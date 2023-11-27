@@ -24,7 +24,8 @@ body {
   background-color: var(--secondary);
   color: var(--texts);
   transition: all .3s;
-box-shadow:5px 3px 10px var(--box2);}
+  box-shadow:5px 3px 10px var(--box2);
+}
 #button:hover {
     transition: all .1s ease;
     box-shadow: 0 0 0 0 
@@ -80,14 +81,14 @@ box-shadow:5px 3px 10px var(--box2);}
   
 
 }
-#btn {
+.btn {
   width: 14%;
   height: 4vh;
   background-color: var(--secondary);
   color: var(--texts);
   box-shadow:3px 2px 3px var(--box2);
 }
-#btn:hover {
+.btn:hover {
   transition: all .1s ease;
   box-shadow: 0 0 0 0 
 }
