@@ -3,8 +3,6 @@ const DOMselectors = {
     card: document.querySelectorAll(".card"),
     dark: document.querySelector(".allstar"),
     light: document.querySelector(".uhlmann"),
-    buttons: document.querySelectorAll(".btn"),
-    
+    buttons: document.querySelectorAll(".btn"),   
 }
-
 export {DOMselectors}

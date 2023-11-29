@@ -11,7 +11,6 @@ DOMselectors.dark.addEventListener("click", function(){
     document.body.classList.remove("darkmd")
   })
 }
-//accepts an array and pushes content onto HMTL
 function populate(arr){
   arr.forEach((el)=> DOMselectors.parent.insertAdjacentHTML(
     "beforeend",
@@ -23,15 +22,10 @@ function populate(arr){
   ))
   }
 function filters(){
-    //for each button we add click event handler
     DOMselectors.buttons.forEach((btn)=> btn.addEventListener("click", function(){
-      //get button text to be used later
       let category = btn.textContent.toLowerCase()
-      //create new array by filtering items by category (the button clicked)
       let newArr = items.filter((el)=>el.type.includes(category))
-      //remove all old cards
       DOMselectors.parent.innerHTML = ""
-      //passing in new filtered array to put cards on screen
       populate(newArr)
     }))
 }
